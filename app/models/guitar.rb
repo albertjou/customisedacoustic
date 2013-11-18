@@ -18,7 +18,7 @@
 #
 
 class Guitar < ActiveRecord::Base
-  attr_accessible :body_color, :body_shape, :bridge_material, :guitar_string, :nut_material, :nut_width, :pickguard, :pickguard_color, :right_hand, :scale_length, :user_id, :order_ids
+  attr_accessible :body_color, :body_shape, :bridge_material, :guitar_string, :nut_material, :nut_width, :pickguard, :pickguard_color, :right_hand, :scale_length
 
   ## Model associations
   has_many :orders

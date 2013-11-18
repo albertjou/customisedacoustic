@@ -31,7 +31,6 @@ class User < ActiveRecord::Base
   ## Model associations
   has_many :orders
   has_many :guitars
-  attr_accessible :order_ids, :guitar_ids
 
   ## Mailboxer settings
 
