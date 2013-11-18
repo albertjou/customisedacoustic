@@ -47,4 +47,4 @@ group :development, :test do
   # Add RailsPanel extension in the Chrome Web Store
 end
 
-gem 'jquery-rails'
+gem 'jquery-rails', '2.3.0'

@@ -90,6 +90,7 @@ ActiveRecord::Schema.define(:version => 20131118030624) do
   create_table "orders", :force => true do |t|
     t.text     "shipping_address"
     t.string   "status",           :default => "customising"
+    t.text     "notes"
     t.datetime "created_at",                                  :null => false
     t.datetime "updated_at",                                  :null => false
   end

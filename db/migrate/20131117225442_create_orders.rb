@@ -3,6 +3,7 @@ class CreateOrders < ActiveRecord::Migration
     create_table :orders do |t|
       t.text :shipping_address
       t.string :status, :default => 'customising'
+      t.text :notes
 
       t.timestamps
     end
