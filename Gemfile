@@ -23,7 +23,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
   gem 'therubyracer'
   gem 'fog', '~>1.3.1'
-  gem 'zurb-foundation'
+  gem 'zurb-foundation', '~> 2.2'
   gem 'devise'
   gem 'activeadmin'
   gem 'meta_search', '>= 1.1.0.pre'
