@@ -11,7 +11,7 @@
 #
 
 class Order < ActiveRecord::Base
-  attr_accessible :shipping_address, :status, :notes
+  attr_accessible :shipping_address, :status, :notes, :user_id, :guitar_id
 
   ## Model associations
   belongs_to :user
