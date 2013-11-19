@@ -13,8 +13,6 @@ gem 'mailboxer'
 
 
 
-
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -23,7 +21,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
   gem 'therubyracer'
   gem 'fog', '~>1.3.1'
-  gem 'zurb-foundation', '~> 2.2'
+  gem 'zurb-foundation'
   gem 'compass-rails'
   gem 'devise'
   gem 'activeadmin'
