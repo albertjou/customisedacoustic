@@ -2,7 +2,7 @@ Customacoustic::Application.routes.draw do
 
   root :to => 'pages#index'
 
-  resources :guitars
+  resources :guitars, except: :destroy
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
