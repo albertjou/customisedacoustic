@@ -6,18 +6,24 @@
     .progress.large-12.success.round
       %span.meter{:style => "width: 10%"}
       .progress-overlay
-        %span.has-tip.tip-top{"data-tooltip" => "", :title => "Customise the nut"}
-          = link_to("1", "", :id => 'step-one')
-        %span.has-tip.tip-top{"data-tooltip" => "", :title => "Customise the body"}
-          = link_to("2", "", :id => 'step-two')
-        %span.has-tip.tip-top{"data-tooltip" => "", :title => "Customise the fretboard"}
-          = link_to("3", "", :id => 'step-three')
-        %span.has-tip.tip-top{"data-tooltip" => "", :title => "Customise the bridge"}
-          = link_to("4", "", :id => 'step-four')
-        %span.has-tip.tip-top{"data-tooltip" => "", :title => "Customise the strings"}
-          = link_to("5", "", :id => 'step-five')
-        %span.has-tip.tip-top{"data-tooltip" => "", :title => "Shipping details"}
-        = link_to("6", "", :id => 'step-six')
+        = link_to "#", :id => 'step-one' do
+          %span.has-tip.tip-top{"data-tooltip" => "", :title => "Customise the nut"}
+            1
+        = link_to "#", :id => 'step-two' do
+          %span.has-tip.tip-top{"data-tooltip" => "", :title => "Customise the body"}
+            2
+        = link_to "#", :id => 'step-three' do
+          %span.has-tip.tip-top{"data-tooltip" => "", :title => "Customise the fretboard"}
+            3
+        = link_to "#", :id => 'step-four' do
+          %span.has-tip.tip-top{"data-tooltip" => "", :title => "Customise the bridge"}
+            4
+        = link_to "#", :id => 'step-five' do
+          %span.has-tip.tip-top{"data-tooltip" => "", :title => "Customise the strings"}
+            5
+        = link_to "#", :id => 'step-six' do
+          %span.has-tip.tip-top{"data-tooltip" => "", :title => "Shipping details"}
+            6
   .row
     .image-show.small-12.large-8.column
       = image_tag("http://www.placeguitar.com/725/350")
@@ -48,4 +54,4 @@
         = render partial: "parts/guitarString"
   .row
     .small-12
-      = link_to("Continue", "", :class => 'button large expand round')
+      = link_to("Continue", "", :class => 'button large expand round', :id => "continue")

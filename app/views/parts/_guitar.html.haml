@@ -1,0 +1,16 @@
+%ul.guitar-shop{"data-orbit" => "", "data-options" => "timer: false; bullets:false; slide_number: false; navigation_arrows: false;"}
+  %li{"data-orbit-slide" => "body-color"}
+    .row
+      %h2 Body color selector
+      %h3
+        = text_field_tag 'color', '#ffffff', :type => 'color'
+    .row
+      %h2 Nut material
+      %h3
+        = select_tag(:value, options_for_select( [['Plastic','plastic'],['TUSQ','tusq'],['Brass', 'brass']] ), :id => 'customDropdown', :class => 'large')
+    .row
+      %h2 Nut width
+      %h3
+        = select_tag(:value, options_for_select( [['41mm', 41],['43mm', 43],['44mm', 44],['48mm', 48]] ))
+    .row
+      %h2 Pickguard
