@@ -1,5 +1,5 @@
-.image-show {
-  min-height: 300px;
+body {
+  background: rgb(114, 114, 114);
 }
 .build-shop h2 {
   text-align: left;
@@ -11,7 +11,93 @@
   display: inline;
   padding-right: 80px;
 }
+.build-shop img {
+  margin-left: 80px;
+  text-align: center;
+  width: 841px;
+}
+
+.build-shop h1 {
+  text-align: center;
+  text-shadow: 0px 2px 3px rgba(150, 150, 150, 1);
+}
 
 .invisible {
   display: none;
+}
+
+.build-shop a {
+  margin-top: 15px;
+}
+
+.progress {
+  position: relative;
+}
+.progress span {
+  opacity: 0.6;
+}
+.progress-overlay {
+  position: absolute;
+  top: -6px;
+  left: -2px;
+  width: 100%;
+  height: 100%;
+}
+
+.progress-overlay a{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: yellow;
+  float: left;
+  margin: 0;
+  padding-top: 2px;
+  position: absolute;
+}
+
+.completed-step {
+  background-color: green;
+  width: 15px;
+  height: 15px;
+}
+
+#step-two {
+  left: 20%;
+}
+#step-three {
+  left: 40%;
+}
+#step-four {
+  left: 60%;
+}
+#step-five {
+  left: 80%;
+}
+#step-six {
+  left: 100%;
+}
+
+.text-description table {
+  padding-right: 0;
+  box-shadow: 0px 2px 3px rgba(150, 150, 150, 1);
+}
+
+.image-show img{
+  min-height: 300px;
+  margin: 0;
+  padding: 0;
+}
+
+.orbit-container {
+
+}
+
+.row {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#color {
+  width: 80px;
+  height: 80px;
 }

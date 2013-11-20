@@ -1,1 +1,11 @@
-%h1 This is the partial for guitar body shape
+%ul.body-shop{"data-orbit" => "", "data-options" => "timer: false;"}
+  - @body_shapes.each do |body_shape|
+    %li{"data-orbit-slide" => "#{body_shape.name}"}
+      %h2.product-name
+        %span.has-tip{"data-tooltip" => "", :title => "I should put the ideal for section here"}
+          = body_shape.name
+      %h3.product-price{"data-price" => "#{body_shape.price}"}
+        = number_to_currency(body_shape.price)
+      = image_tag("#{body_shape.image}")
+      .orbit-caption
+        = body_shape.description

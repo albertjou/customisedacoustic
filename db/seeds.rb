@@ -23,32 +23,33 @@ guitarBody1 = BodyShape.create(:name => "0", :description => "1854, you say? Thi
 
 BODY LENGTH: 19 1/8 (inches)
 MAX DEPTH: 4 1/16
-MAX WIDTH: 13 1/2", :price => 250)
+MAX WIDTH: 13 1/2", :price => 250, :image => 'http://cdn.mos.musicradar.com/images/Tutorial%20images/acoustic/guitar%20shapes/o-620-80.jpg')
 guitarBody2 = BodyShape.create(:name => "00", :description => "Slightly bigger than Size 0, the 00 (grand concert) came along in 1877 and remains in production to this day. The 1934 14-fret variant has a thinner waist and looks more like a smaller 000. Expect prominent yet sweet mids from a quality example.
 
 BODY LENGTH: 19 5/8 (12-fret)
 MAX DEPTH: 4 1/16
-MAX WIDTH: 14 5/16", :price => 275)
+MAX WIDTH: 14 5/16", :price => 275, :image => "http://cdn.mos.musicradar.com/images/Tutorial%20images/acoustic/guitar%20shapes/oo-620-80.jpg")
 guitarBody3 = BodyShape.create(:name => '000/OM', :description => "Martin set the standard for ‘folk’ size too. These days, the 000 (auditorium) has a 24.9-inch scale length, while the OM (Orchestra Model) has 25.4. The Martin 000-28 built for banjoist Perry Bechtel in 1929 was the first ever 14-fret flat-top acoustic.
 
 BODY LENGTH: 19 3/18 (14-fret)
 MAX DEPTH: 4 1/8
-MAX WIDTH: 15", :price => 285)
+MAX WIDTH: 15", :price => 285, :image => "http://cdn.mos.musicradar.com/images/Tutorial%20images/acoustic/guitar%20shapes/ooo-om-620-80.jpg")
 guitarBody4 = BodyShape.create(:name => 'Grand Auditorium', :description => "This term is used today by Taylor to describe its Style 14 body, designed by Bob Taylor in 1994. It’s wider than a Martin dreadnought across the lower bout, almost as deep, but with a more pinched waist and forward bout. Almost always a CE (cutaway electro).
 
 BODY LENGTH: 20
 MAX DEPTH: 4 5/8
-MAX WIDTH: 16", :price => 55)
-guitarBody = BodyShape.create(:name => 'Dreadnought', :description => "The daddy: introduced by Martin initially with more rounded shoulders and 12 frets to the body, it changed to the form we know now in 1934. It’s become synonymous with the very term ‘acoustic guitar’ and you’ll hear these in pretty much every kind of music since the thirties, from early bluegrass to the most modern pop. Sound great as 12-fretters, too.
+MAX WIDTH: 16", :price => 55, :image => 'http://cdn.mos.musicradar.com/images/Tutorial%20images/acoustic/guitar%20shapes/grand-auditorium-620-80.jpg')
+
+guitarBody5 = BodyShape.create(:name => 'Dreadnought', :description => "The daddy: introduced by Martin initially with more rounded shoulders and 12 frets to the body, it changed to the form we know now in 1934. It’s become synonymous with the very term ‘acoustic guitar’ and you’ll hear these in pretty much every kind of music since the thirties, from early bluegrass to the most modern pop. Sound great as 12-fretters, too.
 
 BODY LENGTH: 20 (14-fret)
 MAX DEPTH: 4 7/8
-MAX WIDTH: 15 5/8", :price => 555)
-guitarBody5 = BodyShape.create(:name => 'Round-shoulder dreadnought', :description => "Typified by the Gibson J-45 and J-50, this shape is descended from Gibson Jumbos of the 1930s (though don’t confuse them with the Super Jumbos, right). The dimensions – although varied slightly over the years – put them in dreadnought territory. J-45s/50s/Southern Jumbos have a 24.75-inch scale; the original Advanced Jumbos were 25.5.
+MAX WIDTH: 15 5/8", :price => 555, :image => "http://cdn.mos.musicradar.com/images/Tutorial%20images/acoustic/guitar%20shapes/dreadnought-620-80.jpg")
+guitarBody6 = BodyShape.create(:name => 'Round-shoulder dreadnought', :description => "Typified by the Gibson J-45 and J-50, this shape is descended from Gibson Jumbos of the 1930s (though don’t confuse them with the Super Jumbos, right). The dimensions – although varied slightly over the years – put them in dreadnought territory. J-45s/50s/Southern Jumbos have a 24.75-inch scale; the original Advanced Jumbos were 25.5.
 
 BODY LENGTH: 20
 MAX DEPTH: 4 7/8
-MAX WIDTH: 16", :price => 88)
+MAX WIDTH: 16", :price => 88, :image => 'http://cdn.mos.musicradar.com/images/Tutorial%20images/acoustic/guitar%20shapes/round-shoulder-620-80.jpg')
 
 
 

@@ -1,1 +1,11 @@
-%h1 This is the partial for the bridge
+%ul.bridge-shop{"data-orbit" => "", "data-options" => "timer: false;"}
+  - @bridges.each do |bridge|
+    %li{"data-orbit-slide" => "#{bridge.name}"}
+      %h2.product-name
+        %span.has-tip{"data-tooltip" => "", :title => "I should put the ideal for section here"}
+          = bridge.name
+      %h3.product-price{"data-price" => "#{bridge.price}"}
+        = number_to_currency(bridge.price)
+      = image_tag("#{bridge.image}")
+      .orbit-caption
+        = bridge.description

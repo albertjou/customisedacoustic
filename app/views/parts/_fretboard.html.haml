@@ -2,8 +2,10 @@
   - @fretboards.each do |fretboard|
     %li{"data-orbit-slide" => "#{fretboard.name}"}
       %h2.product-name
-        %span.has-tip{"data-tooltip" => "", :title => "#{fretboard.description}"}
+        %span.has-tip{"data-tooltip" => "", :title => "Any extra information?"}
           = fretboard.name
       %h3.product-price{"data-price" => "#{fretboard.price}"}
         = number_to_currency(fretboard.price)
       = image_tag("#{fretboard.image}")
+      .orbit-caption
+        = fretboard.description
