@@ -1,6 +1,8 @@
 %ul.body-shop{"data-orbit" => "", "data-options" => "timer: false;"}
   - @body_shapes.each do |body_shape|
     %li{"data-orbit-slide" => "#{body_shape.name}"}
+      %span.invisible.step 2
+      %span.invisible.body_id "#{body_shape.id}"
       %h2.product-name
         %span.has-tip{"data-tooltip" => "", :title => "I should put the ideal for section here"}
           = body_shape.name

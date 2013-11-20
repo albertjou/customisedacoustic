@@ -1,5 +1,7 @@
 body {
-  background: rgb(114, 114, 114);
+  background: url('http://www.weedhopper.org/Art/Textures/wood_43.jpg');
+  background-repeat: repeat;
+
 }
 .build-shop h2 {
   text-align: left;
