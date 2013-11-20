@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131118225326) do
+ActiveRecord::Schema.define(:version => 20131119034334) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "namespace"
@@ -46,25 +46,63 @@ ActiveRecord::Schema.define(:version => 20131118225326) do
   add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
   add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
 
+  create_table "body_shapes", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.decimal  "price"
+    t.string   "image"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "bridges", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.decimal  "price"
+    t.string   "image"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
   create_table "conversations", :force => true do |t|
     t.string   "subject",    :default => ""
     t.datetime "created_at",                 :null => false
     t.datetime "updated_at",                 :null => false
   end
 
+  create_table "fretboards", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.decimal  "price"
+    t.string   "image"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "guitar_strings", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.decimal  "price"
+    t.string   "image"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
   create_table "guitars", :force => true do |t|
-    t.boolean  "right_hand",      :default => true
-    t.string   "body_shape"
+    t.boolean  "right_hand",       :default => true
     t.decimal  "scale_length"
     t.decimal  "nut_width"
     t.string   "nut_material"
     t.string   "body_color"
     t.boolean  "pickguard"
-    t.string   "bridge_material"
     t.string   "pickguard_color"
-    t.string   "guitar_string"
-    t.datetime "created_at",                        :null => false
-    t.datetime "updated_at",                        :null => false
+    t.integer  "guitar_string_id"
+    t.integer  "fretboard_id"
+    t.integer  "bridge_id"
+    t.integer  "body_shape_id"
+    t.integer  "user_id"
+    t.datetime "created_at",                         :null => false
+    t.datetime "updated_at",                         :null => false
   end
 
   create_table "notifications", :force => true do |t|

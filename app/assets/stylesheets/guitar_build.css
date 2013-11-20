@@ -1,0 +1,17 @@
+.image-show {
+  min-height: 300px;
+}
+.build-shop h2 {
+  text-align: left;
+  display: inline;
+  padding-left: 80px;
+}
+.build-shop h3 {
+  float: right;
+  display: inline;
+  padding-right: 80px;
+}
+
+.invisible {
+  display: none;
+}
