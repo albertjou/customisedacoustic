@@ -10,6 +10,8 @@ gem 'haml'
 # gem 'bcrypt-ruby', '3.0.0'
 gem 'rails_12factor'
 gem 'mailboxer'
+gem 'devise'
+gem 'activeadmin'
 
 
 
@@ -23,8 +25,6 @@ group :assets do
   gem 'fog', '~>1.3.1'
   gem 'zurb-foundation'
   gem 'compass-rails'
-  gem 'devise'
-  gem 'activeadmin'
   gem 'meta_search', '>= 1.1.0.pre'
 
 end
