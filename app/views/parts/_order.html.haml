@@ -1,0 +1,9 @@
+.order-shop
+ = form_for @order, :method => :post do |f|
+    = f.label :shipping_address
+    = f.text_field :shipping_address, :autofocus => true, :class => "large-6 columns"
+    %br/
+    = f.label :notes
+    = f.text_field :notes, :class => "large-6 columns"
+    %br/
+    =
