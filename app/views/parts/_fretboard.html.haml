@@ -1,7 +1,8 @@
 %ul.fretboard-shop{"data-orbit" => "", "data-options" => "timer: false;"}
   - @fretboards.each do |fretboard|
     %li{"data-orbit-slide" => "#{fretboard.name}"}
-      %h2.product-name
+      %span.invisible.fretboard_id "#{fretboard.id}"
+      %h2.product-name{"data-name" => "Fretboard: #{fretboard.name}"}
         %span.has-tip{"data-tooltip" => "", :title => "Any extra information?"}
           = fretboard.name
       %h3.product-price{"data-price" => "#{fretboard.price}"}

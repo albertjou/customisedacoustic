@@ -35,25 +35,21 @@
             %th{:width => "150"} Price
         %tbody
           %tr
-            %td Content will be dynamically populated
-            %td Price will be dynamically populated
-        %tbody
-          %tr
-            %th{:width=>"100%"} Total Price:
+            %td{:width=>"100%"} Total Price:
   .row
     .small-12
-      .guitar-shop.invisible
+      .guitar-shop.current
         = render partial: "parts/guitar"
-      .body-shop
+      .body-shop.invisible.incomplete
         = render partial: "parts/guitarBody"
-      .fretboard-shop.invisible
+      .fretboard-shop.invisible.incomplete
         = render partial: "parts/fretboard"
-      .bridge-shop.invisible
+      .bridge-shop.invisible.incomplete
         = render partial: "parts/bridge"
-      .string-shop.invisible
+      .string-shop.invisible.incomplete
         = render partial: "parts/guitarString"
   .row
     .small-5.column
-      = link_to("Continue", "#", :class => 'button large expand round', :id => "continue")
+      = link_to("Continue", "#", :class => 'button large expand round wood', :id => "continue")
     .small-5.column
-      = link_to "Save", "#", :data => {:'reveal-id' => "signupModal"}, :class => 'button large expand round'
+      = link_to "Save", "#", :data => {:'reveal-id' => "signupModal"}, :class => 'button large expand round', :id => 'save'

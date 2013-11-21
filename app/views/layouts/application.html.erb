@@ -39,6 +39,15 @@
         <li class="name">
           <a href="#">Hi, <%= current_user.name %></a>
         </li>
+        <li class="divider hide-for-small"></li>
+        <li>
+          <%= link_to 'My guitars', guitars_path %>
+        </li>
+        <li class="divider hide-for-small"></li>
+        <li>
+          <%= link_to 'My orders', root_path %>
+        </li>
+        <li class="divider hide-for-small"></li>
         <li class="has-form">
           <%= link_to 'Sign out', destroy_user_session_path, :method => :delete, :class => 'button' %>
         </li>

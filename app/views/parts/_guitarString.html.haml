@@ -1,7 +1,8 @@
 %ul.string-shop{"data-orbit" => "", "data-options" => "timer: false;"}
   - @guitar_strings.each do |guitar_string|
     %li{"data-orbit-slide" => "#{guitar_string.name}"}
-      %h2.product-name
+      %span.invisible.guitar_string_id "#{guitar_string.id}"
+      %h2.product-name{"data-name" => "String: #{guitar_string.name}"}
         %span.has-tip{"data-tooltip" => "", :title => "I should put the ideal for section here"}
           = guitar_string.name
       %h3.product-price{"data-price" => "#{guitar_string.price}"}
