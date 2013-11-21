@@ -6,4 +6,4 @@
     = f.label :notes
     = f.text_field :notes, :class => "large-6 columns"
     %br/
-    =
+    = select_tag :status, options_for_select([['Ordered', 'ordered'], ['Completed', 'completed'], ['Cancel', 'cancelled']], params[:status])
