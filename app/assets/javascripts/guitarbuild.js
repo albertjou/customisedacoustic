@@ -4,6 +4,7 @@ $(document).ready(function() {
     event.preventDefault();
     step_forward($current);
     update_table($current);
+    update_progress();
   });
 
   $('#save').click(function(event) {
@@ -13,6 +14,15 @@ $(document).ready(function() {
   });
 
 });
+// Update the progress bar
+var update_progress = function() {
+  var multiplier = 20 * parseInt($('.complete').length);
+  // var barWidth = parseInt($('.progress').width());
+  // var newWidth = multiplier * (barWidth/5);
+  var widthPercent = multiplier.toString()
+  $('.meter').css('width', widthPercent + "%");
+}
+
 
 // Hide the current shop and move onto the next one
 var step_forward = function($current) {
