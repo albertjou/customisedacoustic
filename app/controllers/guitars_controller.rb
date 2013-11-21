@@ -1,6 +1,7 @@
 class GuitarsController < ApplicationController
 
 def index
+  @guitars = Guitar.all
 end
 
 def new
@@ -12,6 +13,7 @@ def new
 end
 
 def show
+
 end
 
 def create

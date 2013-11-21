@@ -4,14 +4,16 @@
   <div class="preloader"></div>
     <ul data-orbit data-options="navigation_arrows:false">
       <li data-orbit-slide="headline-1">
-        <h2>This is where</h2>
-        <h3>I'll display the guitars</h3>
-        <p>One</p>
+        <%= image_tag("https://www.creativekidmusic.com/images/asheville%20guitars.jpg") %>
       </li>
       <li data-orbit-slide="headline-2">
-        <h2>Headline 2</h2>
-        <h3>Subheadline</h3>
-        <p>Two</p>
+        <%= image_tag("http://www.wallsave.com/wallpapers/1440x900/guitar/592624/guitar-acoustic-guitars-net-592624.jpg") %>
+      </li>
+      <li data-orbit-slide="headline-3">
+        <%= image_tag("https://www.creativekidmusic.com/images/8%20by%2010%20flag.jpg") %>
+      </li>
+      <li data-orbit-slide="headline-4">
+      <%= image_tag("http://www.hylander.com/images/guitar/construction/back_installed_2.jpg") %>
       </li>
     </ul>
   </div>
@@ -23,8 +25,11 @@
     <%= link_to "Build my guitar", new_guitar_path, :class => 'button large round expand' %>
   </div>
   <div class="small-10 small-centered large-6 large-uncentered columns">
-    <p>
+    <p class="main-description">
     You are unique, so is your music and so should your instrument. Here at Customised Acoustic, we want you to express yourself, create your own guitar easily.
+    </p>
+    <p class= "tagline">
+      If you can dream it, we can build it
     </p>
   </div>
   <div class="small-10 small-centered large-3 large-uncentered columns">

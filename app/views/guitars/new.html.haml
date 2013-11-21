@@ -6,19 +6,19 @@
     .progress.large-12.success.round
       %span.meter{:style => "width: 0%"}
       .progress-overlay
-        = link_to "#", :id => 'step-one' do
+        = link_to "#", :id => 'step-one', :data => {:'section' => 'guitar-shop'} do
           %span.has-tip.tip-top{"data-tooltip" => "", :title => "Customise the nut"}
             1
-        = link_to "#", :id => 'step-two' do
+        = link_to "#", :id => 'step-two', :data => {:'section' => 'body-shop'} do
           %span.has-tip.tip-top{"data-tooltip" => "", :title => "Customise the body"}
             2
-        = link_to "#", :id => 'step-three' do
+        = link_to "#", :id => 'step-three', :data => {:'section' => 'fretboard-shop'} do
           %span.has-tip.tip-top{"data-tooltip" => "", :title => "Customise the fretboard"}
             3
-        = link_to "#", :id => 'step-four' do
+        = link_to "#", :id => 'step-four', :data => {:'section' => 'bridge-shop'} do
           %span.has-tip.tip-top{"data-tooltip" => "", :title => "Customise the bridge"}
             4
-        = link_to "#", :id => 'step-five' do
+        = link_to "#", :id => 'step-five', :data => {:'section' => 'string-shop'} do
           %span.has-tip.tip-top{"data-tooltip" => "", :title => "Customise the strings"}
             5
         = link_to "#", :id => 'step-six' do

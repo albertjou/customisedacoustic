@@ -16,6 +16,13 @@ $(document).ready(function() {
     // Add status
   });
 
+  $('.progress-overlay a').on('click', function(event){
+    var targetDisplay = $(this).data('section');
+    targetDisplay = "." + targetDisplay;
+    $('.current').addClass('incomplete invisible').removeClass('current');
+    $(targetDisplay).addClass('current').removeClass('invisible');
+    $('.orbit-container').foundation('reflow');
+  });
 });
 // Update the progress bar
 var update_progress = function() {
@@ -29,7 +36,7 @@ var update_progress = function() {
 
 // Hide the current shop and move onto the next one
 var step_forward = function($current) {
-    var nextOne = $current.next();
+    var nextOne = $('.incomplete').first();
     $current.addClass('invisible complete');
     nextOne.addClass('current');
     nextOne.removeClass('invisible incomplete')
@@ -85,14 +92,11 @@ $.ajax({
   {body_color: body_color, nut_material: nut_material, nut_width: nut_width, body_shape_id: body_shape_id, fretboard_id: fretboard_id, bridge_id: bridge_id, guitar_string_id: guitar_string_id}}
 })
 .done(function() {
-  console.log("success");
+  alert("Great, it's been saved");
 })
 .fail(function() {
   console.log("error");
 })
-.always(function() {
-  console.log("complete");
-});
 
 };
 
