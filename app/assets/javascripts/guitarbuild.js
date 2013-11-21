@@ -1,15 +1,18 @@
 $(document).ready(function() {
   $('#continue').click(function(event) {
-    var $current = $('.current');
+    if ($('.complete').length === 5 ) {
+      console.log("This is the final step")
+    } else {
+      var $current = $('.current');
+      step_forward($current);
+      update_table($current);
+      update_progress();
+    }
     event.preventDefault();
-    step_forward($current);
-    update_table($current);
-    update_progress();
   });
 
   $('#save').click(function(event) {
-    // First check if session
-    // Then add to database
+    create_guitar();
     // Add status
   });
 
@@ -26,12 +29,12 @@ var update_progress = function() {
 
 // Hide the current shop and move onto the next one
 var step_forward = function($current) {
-  var nextOne = $current.next();
-  $current.addClass('invisible complete');
-  nextOne.addClass('current');
-  nextOne.removeClass('invisible incomplete')
-  $current.removeClass('current');
-  $('.orbit-container').foundation('reflow');
+    var nextOne = $current.next();
+    $current.addClass('invisible complete');
+    nextOne.addClass('current');
+    nextOne.removeClass('invisible incomplete')
+    $current.removeClass('current');
+    $('.orbit-container').foundation('reflow');
 };
 
 // Add selection to table upon click
@@ -69,16 +72,17 @@ var create_guitar = function() {
   var body_color = $('#guitar-body-color').val();
   var nut_material = $('#nut-material').val();
   var nut_width = $('#nut-width').val();
-  var body_shape = parseInt($('.active .body_id').text().replace(/"/g, ''));
-  var fretboard = parseInt($('.active .fretboard_id').text().replace(/"/g, ''));
-  var bridge = parseInt($('.active .bridge_id').text().replace(/"/g, ''));
-  var guitar_string = parseInt($('.active .guitar_string_id').text().replace(/"/g, ''));
+  var body_shape_id = parseInt($('.active .body_id').text().replace(/"/g, ''));
+  var fretboard_id = parseInt($('.active .fretboard_id').text().replace(/"/g, ''));
+  var bridge_id = parseInt($('.active .bridge_id').text().replace(/"/g, ''));
+  var guitar_string_id = parseInt($('.active .guitar_string_id').text().replace(/"/g, ''));
 
 $.ajax({
-  url: '/guitars/new',
-  type: 'get',
+  url: '/guitars',
+  type: 'post',
   dataType: 'json',
-  data: {id: id, body_color: body_color, nut_material: nut_material, nut_width: nut_width, body_shape: body_shape, fretboard: fretboard, bridge: bridge, guitar_string: guitar_string}
+  data: {guitar:
+  {body_color: body_color, nut_material: nut_material, nut_width: nut_width, body_shape_id: body_shape_id, fretboard_id: fretboard_id, bridge_id: bridge_id, guitar_string_id: guitar_string_id}}
 })
 .done(function() {
   console.log("success");

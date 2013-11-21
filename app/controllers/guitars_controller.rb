@@ -15,6 +15,8 @@ def show
 end
 
 def create
+  guitar = Guitar.new params[:guitar]
+  current_user.guitars << guitar
 end
 
 end

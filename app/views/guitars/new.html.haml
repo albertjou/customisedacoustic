@@ -52,4 +52,7 @@
     .small-5.column
       = link_to("Continue", "#", :class => 'button large expand round wood', :id => "continue")
     .small-5.column
-      = link_to "Save", "#", :data => {:'reveal-id' => "signupModal"}, :class => 'button large expand round', :id => 'save'
+      - if user_signed_in?
+        = link_to "Save", "#", :class => 'button large expand round', :id => 'save'
+      - else
+        = link_to "Save", "#", :data => {:'reveal-id' => "signupModal"}, :class => 'button large expand round', :id => 'save'
